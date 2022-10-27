@@ -1,7 +1,7 @@
 <template>
     <div>
         <Input
-            :value="inputValue"
+            v-model="inputValue"
             :type="type"
             :label="label"
             @input="onChangeHandler"

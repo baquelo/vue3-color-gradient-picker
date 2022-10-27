@@ -1,5 +1,4 @@
 <template>
-<fragment>
     <RGBItem
         :value="red"
         type="number"
@@ -24,7 +23,6 @@
         label="Alpha"
         :onChange="value => changeValue('alpha', value)"
     />
-</fragment>
 </template>
 
 <script src="./script.js" />

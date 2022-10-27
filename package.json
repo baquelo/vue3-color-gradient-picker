@@ -1,11 +1,14 @@
 {
-  "name": "vue-color-gradient-picker",
+  "name": "@marceloalmeidadev/color-gradient-picker",
   "description": "Color and gradient picker for vue.js",
-  "version": "0.1.2",
-  "main": "./dist/index-cjs.js",
-  "module": "./dist/index-es.js",
-  "browser": "./dist/index-cjs.js",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "style": "./dist/index.css",
+  "files": [
+    "dist/*"
+  ],
   "author": "Arthur Hayrapetyan",
   "license": "MIT",
   "homepage": "https://arthay.github.io/vue-color-gradient-picker/",
@@ -17,58 +20,48 @@
     "url": "https://github.com/arthay/vue-color-gradient-picker/issues"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "rimraf dist && rollup -c",
-    "build:demo": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build:demo": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
-    "vue-fragment": "^1.5.1"
+    "@algolia/client-search": "^4.14.2",
+    "pinia": "^2.0.23"
   },
   "peerDependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^3.2.41"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.0",
-    "@rollup/plugin-buble": "^0.21.3",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-json": "^4.0.3",
-    "@rollup/plugin-multi-entry": "^3.0.1",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~4.3.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.6.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "gh-pages": "^2.2.0",
-    "node-sass": "^4.14.1",
-    "rollup": "^2.10.5",
-    "rollup-plugin-copy-assets": "^2.0.1",
-    "rollup-plugin-includepaths": "^0.2.3",
-    "rollup-plugin-scss": "^2.5.0",
-    "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-vue": "^5.1.9",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.1",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
+    "@rollup/plugin-alias": "^4.0.2",
+    "@rollup/plugin-buble": "^1.0.1",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@volar-plugins/vetur": "latest",
+    "@vue/compat": "^3.2.41",
+    "@vue/compiler-sfc": "^3.2.41",
+    "eslint": "8.26.0",
+    "eslint-plugin-vue": "9.6.0",
+    "gh-pages": "^4.0.0",
+    "node-sass": "^7.0.3",
+    "rollup": "^3.2.3",
+    "rollup-plugin-copy-assets": "^2.0.3",
+    "rollup-plugin-includepaths": "^0.2.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.55.0",
+    "vite": "^3.2.0",
+    "vitepress": "^1.0.0-alpha.26",
+    "vue": "^3.2.41"
   },
   "browserslist": [
     "> 1%",

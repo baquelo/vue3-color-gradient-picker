@@ -2,10 +2,7 @@ export default {
     name: "Input",
 
     props: {
-        value: {
-            type: String | Number,
-            default: '',
-        },
+        modelValue: [String, Number],
         label: {
             type: String,
             default: '',
@@ -30,8 +27,5 @@ export default {
         },
     },
 
-    model: {
-        prop: "value",
-        event: "input"
-    }
+    emits: ['update:modelValue'],
 }

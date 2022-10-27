@@ -5,8 +5,8 @@
                 :class="`${type}-input input`"
                 @focus="onFocus"
                 @blur="onBlur"
-                :value="value"
-                @input="$emit('input', $event)"
+                :value="modelValue"
+                @input="$emit('update:modelValue', $event.target.value)"
             />
         </div>
         <div class="label">
